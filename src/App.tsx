@@ -10,6 +10,7 @@ import Button from './components/Button';
 import ButtonEvent from './components/ButtonEvent';
 import Input from './components/Input';
 import LoggedIn from './components/LoggedIn';
+import User from './components/User';
 
 function App() {
 
@@ -49,6 +50,8 @@ function App() {
       <Input value="" handleChange={(event) => console.log(event.target.value)}/>
 
       <LoggedIn />
+
+      <User />
     </div>
   );
 }

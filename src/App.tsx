@@ -9,6 +9,7 @@ import Oscar from './components/Oscar';
 import Button from './components/Button';
 import ButtonEvent from './components/ButtonEvent';
 import Input from './components/Input';
+import LoggedIn from './components/LoggedIn';
 
 function App() {
 
@@ -46,6 +47,8 @@ function App() {
       <ButtonEvent handleClick={(e, id) => console.log("Event Button", e.target, id)}/>
 
       <Input value="" handleChange={(event) => console.log(event.target.value)}/>
+
+      <LoggedIn />
     </div>
   );
 }

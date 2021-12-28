@@ -5,14 +5,15 @@ type GreetProps = {
     name: string
     surname: string
     message: number
+    isMessage: boolean
 }
 
-const Greet = ({name, surname, message}: GreetProps) => {
+const Greet = ({name, surname, message, isMessage}: GreetProps) => {
 
 
     return (
         <div>
-            <h2>Welcome {name} {surname}! You have {message} unread messages</h2>
+            {isMessage && <h2>Welcome {name} {surname}! You have {message} unread messages</h2>}
         </div>
     )
 }

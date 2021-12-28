@@ -6,6 +6,9 @@ import PersonList from './components/PersonList';
 import Status from './components/Status';
 import Heading from './components/Heading';
 import Oscar from './components/Oscar';
+import Button from './components/Button';
+import ButtonEvent from './components/ButtonEvent';
+import Input from './components/Input';
 
 function App() {
 
@@ -38,6 +41,11 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
+
+      <Button handleClick={() => console.log("Button clicked!")} />
+      <ButtonEvent handleClick={(e, id) => console.log("Event Button", e.target, id)}/>
+
+      <Input value="" handleChange={(event) => console.log(event.target.value)}/>
     </div>
   );
 }

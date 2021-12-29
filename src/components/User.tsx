@@ -9,6 +9,8 @@ const User = () => {
 
     //Informisemo TS da user moze da bude null ili AuthUser koji smo definisali gore
     const [user, setUser] = useState<null | AuthUser>(null);
+    //const [user, setUser] = useState<AuthUser>({} as AuthUser); //Ovako mozemo da stavimo ako smo sigurni da ce se null promeniti i nece se vracati 
+    //Posle toga mozemo da sklonimo znak pitanja dole u XML-u
 
     const handleLogin = () => {
         setUser({

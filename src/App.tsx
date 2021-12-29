@@ -11,6 +11,7 @@ import ButtonEvent from './components/ButtonEvent';
 import Input from './components/Input';
 import LoggedIn from './components/LoggedIn';
 import User from './components/User';
+import Counter from './components/Counter';
 
 function App() {
 
@@ -52,6 +53,8 @@ function App() {
       <LoggedIn />
 
       <User />
+
+      <Counter />
     </div>
   );
 }

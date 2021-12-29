@@ -13,6 +13,7 @@ import LoggedIn from './components/LoggedIn';
 import User from './components/User';
 import Counter from './components/Counter';
 import UserContext from './components/UserContext';
+import DomRef from './components/DomRef';
 
 function App() {
 
@@ -58,6 +59,8 @@ function App() {
       <Counter />
 
       <UserContext />
+
+      <DomRef />
     </div>
   );
 }

@@ -16,6 +16,7 @@ import UserContext from './components/UserContext';
 import DomRef from './components/DomRef';
 import MyUsers from "./components/MyUsers";
 import ReactReduxTS from "./components/ReactReduxTS";
+import Events from "./components/Events";
 
 
 function App() {
@@ -61,6 +62,8 @@ function App() {
 
   return (
     <div className="App">
+      <Events />
+
       <Greet name="Vladimir" surname="Timotijevic" message={10} isMessage={true}/>
       <Person name={personName}/>
       <PersonList names={nameList}/>
@@ -88,6 +91,7 @@ function App() {
       <MyUsers users={users} />
 
       <ReactReduxTS />
+
     </div>
   );
 }

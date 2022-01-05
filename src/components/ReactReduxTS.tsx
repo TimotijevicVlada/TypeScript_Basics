@@ -25,7 +25,8 @@ const ReactReduxTS = () => {
     const dispatch = useDispatch();
 
     //Funkcija koja poziva reduks da odradi svoj posao
-    const addNote = () => {
+    const addNote = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         //This could be a possible mistake let's change it
         dispatch({ type: "ADD_NOTE", payload: note });
         setNote("");
@@ -34,11 +35,14 @@ const ReactReduxTS = () => {
     return (
         <div className='redux'>
             <hr />
-            <input onChange={updateNote} value={note} type="text" name='note' placeholder='Note' />
-            <button onClick={addNote}>Add note</button>
+            <form onSubmit={addNote}>
+                <input onChange={updateNote} value={note} type="text" name='note' placeholder='Note' />
+                <button type='submit'>Add note</button>
+            </form>
+
             <ul>
-                {notes.map(item => (
-                    <li key={item}>{item}</li>
+                {notes.map((item, index) => (
+                    <li key={index}>{item}</li>
                 ))}
             </ul>
             <hr />

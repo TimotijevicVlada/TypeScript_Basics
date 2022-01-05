@@ -1,4 +1,4 @@
-
+import {useState} from "react";
 import './App.css';
 import Greet from './components/Greet';
 import Person from './components/Person';
@@ -14,8 +14,30 @@ import User from './components/User';
 import Counter from './components/Counter';
 import UserContext from './components/UserContext';
 import DomRef from './components/DomRef';
+import MyUsers from "./components/MyUsers";
+import ReactReduxTS from "./components/ReactReduxTS";
+
 
 function App() {
+
+  const [users, setUsers] = useState([{
+    name: "Mica",
+    surname: "Micic",
+    age: 30,
+    isMarried: false
+  }, 
+  {
+    name: "Pera",
+    surname: "Peric",
+    age: 32,
+    isMarried: true
+  },
+  {
+    name: "Zika",
+    surname: "Zikic",
+    age: 28,
+    isMarried: false
+  }]);
 
   const personName = {
     first: "Bruce",
@@ -35,6 +57,7 @@ function App() {
       last: "Lee"
     }
   ]
+   
 
   return (
     <div className="App">
@@ -61,6 +84,10 @@ function App() {
       <UserContext />
 
       <DomRef />
+
+      <MyUsers users={users} />
+
+      <ReactReduxTS />
     </div>
   );
 }

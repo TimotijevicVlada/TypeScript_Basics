@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {UserContextProvider} from "./components/context/Context"
+import { UserContextProvider } from "./components/context/Context"
+import { Provider } from "react-redux";
+import { store } from './components/store/store';
 
 ReactDOM.render(
-  <UserContextProvider>
-    <App />
-  </UserContextProvider>,
+  <Provider store={store}>
+    <UserContextProvider>
+      <App />
+    </UserContextProvider>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

@@ -17,6 +17,7 @@ import DomRef from './components/DomRef';
 import MyUsers from "./components/MyUsers";
 import ReactReduxTS from "./components/ReactReduxTS";
 import Events from "./components/Events";
+import DisplayObject from "./components/DisplayObject";
 
 
 function App() {
@@ -64,12 +65,36 @@ function App() {
       name: "Vlada",
       surname: "Timotijevic",
       age: 31
+    },
+    {
+      name: "Pera",
+      surname: "Peric",
+      age: 33
     }
   ]
 
-  console.log(myArray);
+  const myObj = {
+    drzava: "Srbija",
+    grad: "Beograd",
+    ulica: "Tomasa Mana"
+  }
+  
+  const isWorking = false;
+  const brojGodina = 31;
 
-   
+  const getNumber = () => {
+    alert(4 + 1);
+  }
+
+  const clgNum = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value)
+  }
+
+  const handleSubmit = (e: any ) => {
+    e.preventDefault();
+    alert("Handle submit!");
+  }
+  
 
   return (
     <div className="App">
@@ -102,6 +127,8 @@ function App() {
       <MyUsers users={users} />
 
       <ReactReduxTS />
+
+      <DisplayObject myArray={myArray} myObj={myObj} isWorking={isWorking} brojGodina={brojGodina} getNumber={getNumber} clgNum={clgNum} handleSubmit={handleSubmit}/>
 
     </div>
   );

@@ -58,6 +58,17 @@ function App() {
       last: "Lee"
     }
   ]
+
+  const myArray = [
+    {
+      name: "Vlada",
+      surname: "Timotijevic",
+      age: 31
+    }
+  ]
+
+  console.log(myArray);
+
    
 
   return (
